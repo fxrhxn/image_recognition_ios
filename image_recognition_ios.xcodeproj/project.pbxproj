@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9C8E085A1FA109FE0045C1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E08591FA109FE0045C1A8 /* AppDelegate.swift */; };
-		9C8E085C1FA109FF0045C1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E085B1FA109FF0045C1A8 /* ViewController.swift */; };
+		9C8E085C1FA109FF0045C1A8 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E085B1FA109FF0045C1A8 /* CameraVC.swift */; };
 		9C8E085F1FA109FF0045C1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E085D1FA109FF0045C1A8 /* Main.storyboard */; };
 		9C8E08611FA109FF0045C1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E08601FA109FF0045C1A8 /* Assets.xcassets */; };
 		9C8E08641FA109FF0045C1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E08621FA109FF0045C1A8 /* LaunchScreen.storyboard */; };
 		9C8E086F1FA10A000045C1A8 /* image_recognition_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E086E1FA10A000045C1A8 /* image_recognition_iosTests.swift */; };
+		9C8E087A1FA246C80045C1A8 /* TensorflowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E08791FA246C80045C1A8 /* TensorflowVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		9C8E08561FA109FE0045C1A8 /* image_recognition_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = image_recognition_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8E08591FA109FE0045C1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C8E085B1FA109FF0045C1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C8E085B1FA109FF0045C1A8 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		9C8E085E1FA109FF0045C1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C8E08601FA109FF0045C1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C8E08631FA109FF0045C1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		9C8E086A1FA10A000045C1A8 /* image_recognition_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = image_recognition_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8E086E1FA10A000045C1A8 /* image_recognition_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = image_recognition_iosTests.swift; sourceTree = "<group>"; };
 		9C8E08701FA10A000045C1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C8E08791FA246C80045C1A8 /* TensorflowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TensorflowVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				9C8E08591FA109FE0045C1A8 /* AppDelegate.swift */,
-				9C8E085B1FA109FF0045C1A8 /* ViewController.swift */,
+				9C8E085B1FA109FF0045C1A8 /* CameraVC.swift */,
+				9C8E08791FA246C80045C1A8 /* TensorflowVC.swift */,
 				9C8E085D1FA109FF0045C1A8 /* Main.storyboard */,
 				9C8E08601FA109FF0045C1A8 /* Assets.xcassets */,
 				9C8E08621FA109FF0045C1A8 /* LaunchScreen.storyboard */,
@@ -199,7 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C8E085C1FA109FF0045C1A8 /* ViewController.swift in Sources */,
+				9C8E085C1FA109FF0045C1A8 /* CameraVC.swift in Sources */,
+				9C8E087A1FA246C80045C1A8 /* TensorflowVC.swift in Sources */,
 				9C8E085A1FA109FE0045C1A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
