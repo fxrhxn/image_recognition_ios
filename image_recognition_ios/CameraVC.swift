@@ -139,6 +139,11 @@ class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
 
+    @IBAction func photoButtonClicked(_ sender: Any) {
+        
+        //Set take photo to true if the photo button is clicked. 
+        takePhoto = true;
+    }
     
 }
 

@@ -14,6 +14,8 @@
 		9C8E08641FA109FF0045C1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E08621FA109FF0045C1A8 /* LaunchScreen.storyboard */; };
 		9C8E086F1FA10A000045C1A8 /* image_recognition_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E086E1FA10A000045C1A8 /* image_recognition_iosTests.swift */; };
 		9C8E087A1FA246C80045C1A8 /* TensorflowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E08791FA246C80045C1A8 /* TensorflowVC.swift */; };
+		BCF0ACB0B5D0F182F18FF722 /* Pods_image_recognition_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A7811DC5C29242E20A5958 /* Pods_image_recognition_ios.framework */; };
+		E775EB539749465DFD5C0744 /* Pods_image_recognition_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BA811C9041298731026DEA /* Pods_image_recognition_iosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04513143D9A5C36C88CDF70B /* Pods-image_recognition_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-image_recognition_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-image_recognition_iosTests/Pods-image_recognition_iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C80ABED777A80D34087DBED /* Pods-image_recognition_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-image_recognition_iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-image_recognition_iosTests/Pods-image_recognition_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D3FBAD06347C1F37B30AF92 /* Pods-image_recognition_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-image_recognition_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-image_recognition_ios/Pods-image_recognition_ios.release.xcconfig"; sourceTree = "<group>"; };
+		97BA811C9041298731026DEA /* Pods_image_recognition_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_image_recognition_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8E08561FA109FE0045C1A8 /* image_recognition_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = image_recognition_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8E08591FA109FE0045C1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C8E085B1FA109FF0045C1A8 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		9C8E086E1FA10A000045C1A8 /* image_recognition_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = image_recognition_iosTests.swift; sourceTree = "<group>"; };
 		9C8E08701FA10A000045C1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8E08791FA246C80045C1A8 /* TensorflowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TensorflowVC.swift; sourceTree = "<group>"; };
+		BE9D7C23FDCBDBFDAEBEDAC6 /* Pods-image_recognition_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-image_recognition_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-image_recognition_ios/Pods-image_recognition_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		F3A7811DC5C29242E20A5958 /* Pods_image_recognition_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_image_recognition_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF0ACB0B5D0F182F18FF722 /* Pods_image_recognition_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E775EB539749465DFD5C0744 /* Pods_image_recognition_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76F66233063FEDCEFCE7C420 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3A7811DC5C29242E20A5958 /* Pods_image_recognition_ios.framework */,
+				97BA811C9041298731026DEA /* Pods_image_recognition_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C8E084D1FA109FE0045C1A8 = {
 			isa = PBXGroup;
 			children = (
 				9C8E08581FA109FE0045C1A8 /* image_recognition_ios */,
 				9C8E086D1FA10A000045C1A8 /* image_recognition_iosTests */,
 				9C8E08571FA109FE0045C1A8 /* Products */,
+				A7F0BDD798FE38AC7AFF8B09 /* Pods */,
+				76F66233063FEDCEFCE7C420 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,17 @@
 			path = image_recognition_iosTests;
 			sourceTree = "<group>";
 		};
+		A7F0BDD798FE38AC7AFF8B09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE9D7C23FDCBDBFDAEBEDAC6 /* Pods-image_recognition_ios.debug.xcconfig */,
+				5D3FBAD06347C1F37B30AF92 /* Pods-image_recognition_ios.release.xcconfig */,
+				2C80ABED777A80D34087DBED /* Pods-image_recognition_iosTests.debug.xcconfig */,
+				04513143D9A5C36C88CDF70B /* Pods-image_recognition_iosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C8E08731FA10A000045C1A8 /* Build configuration list for PBXNativeTarget "image_recognition_ios" */;
 			buildPhases = (
+				F4C3F0A355399B8579F3C266 /* [CP] Check Pods Manifest.lock */,
 				9C8E08521FA109FE0045C1A8 /* Sources */,
 				9C8E08531FA109FE0045C1A8 /* Frameworks */,
 				9C8E08541FA109FE0045C1A8 /* Resources */,
+				0EF9C71F946816B567908265 /* [CP] Embed Pods Frameworks */,
+				9219AB8518C5FCE9F1D555F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C8E08761FA10A000045C1A8 /* Build configuration list for PBXNativeTarget "image_recognition_iosTests" */;
 			buildPhases = (
+				25CD229F94CB14E9824D617B /* [CP] Check Pods Manifest.lock */,
 				9C8E08661FA10A000045C1A8 /* Sources */,
 				9C8E08671FA10A000045C1A8 /* Frameworks */,
 				9C8E08681FA10A000045C1A8 /* Resources */,
+				637908FE0C505F89B20B8570 /* [CP] Embed Pods Frameworks */,
+				9921502C15E50865719328AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +187,7 @@
 				TargetAttributes = {
 					9C8E08551FA109FE0045C1A8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7979X6HKG4;
 						ProvisioningStyle = Automatic;
 					};
 					9C8E08691FA10A000045C1A8 = {
@@ -196,6 +235,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EF9C71F946816B567908265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-image_recognition_ios/Pods-image_recognition_ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-image_recognition_ios/Pods-image_recognition_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25CD229F94CB14E9824D617B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-image_recognition_iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		637908FE0C505F89B20B8570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-image_recognition_iosTests/Pods-image_recognition_iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9219AB8518C5FCE9F1D555F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-image_recognition_ios/Pods-image_recognition_ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9921502C15E50865719328AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-image_recognition_iosTests/Pods-image_recognition_iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C3F0A355399B8579F3C266 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-image_recognition_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C8E08521FA109FE0045C1A8 /* Sources */ = {
@@ -341,8 +482,10 @@
 		};
 		9C8E08741FA10A000045C1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE9D7C23FDCBDBFDAEBEDAC6 /* Pods-image_recognition_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7979X6HKG4;
 				INFOPLIST_FILE = image_recognition_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.image-recognition-ios";
@@ -353,8 +496,10 @@
 		};
 		9C8E08751FA10A000045C1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D3FBAD06347C1F37B30AF92 /* Pods-image_recognition_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7979X6HKG4;
 				INFOPLIST_FILE = image_recognition_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.image-recognition-ios";
@@ -365,6 +510,7 @@
 		};
 		9C8E08771FA10A000045C1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C80ABED777A80D34087DBED /* Pods-image_recognition_iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -379,6 +525,7 @@
 		};
 		9C8E08781FA10A000045C1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04513143D9A5C36C88CDF70B /* Pods-image_recognition_iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +557,7 @@
 				9C8E08751FA10A000045C1A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C8E08761FA10A000045C1A8 /* Build configuration list for PBXNativeTarget "image_recognition_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +566,7 @@
 				9C8E08781FA10A000045C1A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
