@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class TensorflowVC: UIViewController {
     
@@ -33,30 +34,69 @@ class TensorflowVC: UIViewController {
             
            // print(availableImage)
          imageView.image = availableImage
-        }
-        
-        clearLabels()
-        showActivityIndicatory(uiView: spinnerView)
-        showLabels(first : "Yeah", second : "Sure", third : "Mhmmmm")
-        
-        //Call an API to custom tensorflow API and have that update the labels.
-        var API_ROUTE = "https://tensorflow-image.herokuapp.com/api/testing";
-        
-        // All three of these calls are equivalent
-        Alamofire.request(API_ROUTE, method: .post, parameters: ["binary_image" : "TESTING HAHAHA"]).responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
             
-            if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
+            let imageData:NSData = UIImageJPEGRepresentation(availableImage, 1) as! NSData
+
+            
+            //Call an API to custom tensorflow API and have that update the labels.
+            var API_ROUTE = "https://tensorflow-image.herokuapp.com/api/testing"
+
+            let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            
+            
+            // All three of these calls are equivalent
+            Alamofire.request(API_ROUTE, method: .post, parameters: ["binary_image" : strBase64]).responseJSON { response in
+                
+              //  let json = try? JSONSerialization.jsonObject(with: response, options: [])
+                
+                // responseString worked kinda
+                
+             
+                
+                if let data = response.result.value {
+                    
+                    
+                    
+                    /* The data that is being sent is larger than the file system can handle. What the fuck! */
+                    
+                    
+                    var tf_data = JSON(data)
+                    
+                  
+                    var first_type = tf_data[0]
+                    var second_type = tf_data[1]
+                    var third_type = tf_data[2]
+                    
+                   
+                    
+                    var first_percentage = first_type["percentage"]
+                    var first_name = first_type["name"]
+
+                    var second_percentage = second_type["percentage"];
+                    var second_name = second_type["name"];
+
+                    var third_percentage = third_type["percentage"]
+                    var third_name = third_type["name"]
+
+                    
+                    self.clearLabels()
+                    self.showActivityIndicatory(uiView: self.spinnerView)
+               
+                    
+                    self.firstGuess.text = "\(first_name)  \(first_percentage)%"
+                    self.secondGuess.text = "\(second_name)  \(second_percentage)%"
+                    self.thirdGuess.text = "\(third_name)  \(third_percentage)%"
+                    
+                    
+                    
+                    
+                    
+                }
             }
             
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
+            
         }
-        
+ 
         
     }
     

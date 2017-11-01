@@ -148,5 +148,40 @@
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="124.58770614692655"/>
         </scene>
+        <!--TestingVC-->
+        <scene sceneID="gFv-2F-4x8">
+            <objects>
+                <viewController id="vUS-Jd-bNd" customClass="TestingVC" customModule="image_recognition_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MZu-VX-mLc"/>
+                        <viewControllerLayoutGuide type="bottom" id="TRT-DR-O1t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9br-aJ-evo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="if_camera-outline_216123" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-Ro-G7c">
+                                <rect key="frame" x="67" y="72" width="240" height="280"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Tb-Ro-G7c" firstAttribute="leading" secondItem="9br-aJ-evo" secondAttribute="leadingMargin" constant="51" id="PWF-WC-T5X"/>
+                            <constraint firstItem="3Tb-Ro-G7c" firstAttribute="top" secondItem="MZu-VX-mLc" secondAttribute="bottom" constant="52" id="V0J-b4-ubf"/>
+                            <constraint firstItem="3Tb-Ro-G7c" firstAttribute="centerX" secondItem="9br-aJ-evo" secondAttribute="centerX" id="e32-cL-9Qg"/>
+                            <constraint firstItem="TRT-DR-O1t" firstAttribute="top" secondItem="3Tb-Ro-G7c" secondAttribute="bottom" constant="315" id="va3-ph-Be1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="test_image" destination="3Tb-Ro-G7c" id="01v-dA-Xwe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4p-wp-j0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501.60000000000002" y="805.54722638680664"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="if_camera-outline_216123" width="128" height="128"/>
+    </resources>
 </document>
