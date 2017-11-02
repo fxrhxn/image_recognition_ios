@@ -99,11 +99,11 @@ class TensorflowVC: UIViewController {
                     
                     self.clearLabels()
 
-                    self.firstGuess.text = "\(self.breakString(str : first_name.string!))  \(first_percentage)%"
+                    self.firstGuess.text = "\(first_name)  \(first_percentage)%"
                     
-                    self.secondGuess.text = "\(self.breakString(str : second_name.string!))  \(second_percentage)%"
+                    self.secondGuess.text = "\(second_name)  \(second_percentage)%"
                     
-                   self.thirdGuess.text = "\(self.breakString(str : third_name.string!))  \(third_percentage)%"
+                   self.thirdGuess.text = "\(third_name)  \(third_percentage)%"
                    
                     
               
@@ -179,7 +179,7 @@ class TensorflowVC: UIViewController {
     //Function to show the spinner.
     func showSpinner(){
         SwiftSpinner.show(delay: 0.0, title: "Classifying image...", animated: true)
-      //  SwiftSpinner.sharedInstance.innerColor = UIColor.grey.withAlphaComponent(0.5)
+        SwiftSpinner.sharedInstance.innerColor = UIColor.white.withAlphaComponent(0.5)
         
     }
     
@@ -197,7 +197,7 @@ class TensorflowVC: UIViewController {
     //Success for the spinner.
     func spinnerSuccess(){
         SwiftSpinner.sharedInstance.innerColor = UIColor.magenta.withAlphaComponent(0.5)
-        SwiftSpinner.show(delay: 1.0, title: "Image Classified", animated: false)
+        SwiftSpinner.show(delay: 2.0, title: "Image Classified", animated: false)
     }
     
 
