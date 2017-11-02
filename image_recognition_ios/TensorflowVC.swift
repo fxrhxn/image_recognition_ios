@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SwiftSpinner
 
 class TensorflowVC: UIViewController {
     
@@ -21,18 +22,29 @@ class TensorflowVC: UIViewController {
     @IBOutlet weak var firstGuess: UILabel!
     @IBOutlet weak var secondGuess: UILabel!
     @IBOutlet weak var thirdGuess: UILabel!
-    
-    //The spinner view.
-    @IBOutlet weak var spinnerView: UIView!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+    
+    
+    //The delay function to hold shit out.
+    func delay(seconds: Double, completion: @escaping () -> ()) {
+        let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
+        
+        DispatchQueue.main.asyncAfter(deadline: popTime) {
+            completion()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
             // Set the image to the image view.
         if let availableImage = takenPhoto {
             
-           // print(availableImage)
+            //Show the spinner.
+            self.showSpinner();
+            
+           
          imageView.image = availableImage
             
             let imageData:NSData = UIImageJPEGRepresentation(availableImage, 1) as! NSData
@@ -52,14 +64,18 @@ class TensorflowVC: UIViewController {
                 // responseString worked kinda
                 
              
-                
                 if let data = response.result.value {
                     
+                    //Show a spinner that shows success.
+                    self.spinnerSuccess()
                     
+                    //Remove the spinner with a delay
+                    self.delay(seconds: 1.6, completion: {
                     
-                    /* The data that is being sent is larger than the file system can handle. What the fuck! */
+                        self.hideSpinner()
+                    })
                     
-                    
+    
                     var tf_data = JSON(data)
                     
                   
@@ -78,18 +94,19 @@ class TensorflowVC: UIViewController {
                     var third_percentage = third_type["percentage"]
                     var third_name = third_type["name"]
 
+                  
+                  
                     
                     self.clearLabels()
-                    self.showActivityIndicatory(uiView: self.spinnerView)
-               
+
+                    self.firstGuess.text = "\(self.breakString(str : first_name.string!))  \(first_percentage)%"
                     
-                    self.firstGuess.text = "\(first_name)  \(first_percentage)%"
-                    self.secondGuess.text = "\(second_name)  \(second_percentage)%"
-                    self.thirdGuess.text = "\(third_name)  \(third_percentage)%"
+                    self.secondGuess.text = "\(self.breakString(str : second_name.string!))  \(second_percentage)%"
                     
+                   self.thirdGuess.text = "\(self.breakString(str : third_name.string!))  \(third_percentage)%"
+                   
                     
-                    
-                    
+              
                     
                 }
             }
@@ -141,6 +158,56 @@ class TensorflowVC: UIViewController {
         }
         
     }
+    
+    
+    //Function to test the spinner.
+    func testSpinner(){
+        
+        self.showSpinner();
+        
+        //Mimic the response.
+        delay(seconds: 5.0) {
+            self.spinnerError()
+        }
+        
+        //Hide the spinner 2 seconds later.
+        delay(seconds : 7.0){
+            self.hideSpinner()
+        }
+    }
+    
+    //Function to show the spinner.
+    func showSpinner(){
+        SwiftSpinner.show(delay: 0.0, title: "Classifying image...", animated: true)
+      //  SwiftSpinner.sharedInstance.innerColor = UIColor.grey.withAlphaComponent(0.5)
+        
+    }
+    
+    //Function that hides the spinner.
+    func hideSpinner(){
+        SwiftSpinner.hide()
+    }
+    
+    //Error for the spinner.
+    func spinnerError(){
+        SwiftSpinner.sharedInstance.innerColor = UIColor.red.withAlphaComponent(0.5)
+        SwiftSpinner.show(delay: 0.0, title: "Error - Smh :(", animated: false)
+    }
+    
+    //Success for the spinner.
+    func spinnerSuccess(){
+        SwiftSpinner.sharedInstance.innerColor = UIColor.magenta.withAlphaComponent(0.5)
+        SwiftSpinner.show(delay: 1.0, title: "Image Classified", animated: false)
+    }
+    
+
+    func breakString(str : String) -> String {
+        
+        let index = str.index(str.startIndex, offsetBy: 10)
+        return str.substring(to: index)
+        
+    }
+    
     
     
     //Back button is clicked.

@@ -8,7 +8,8 @@ target 'image_recognition_ios' do
   # Pods for image_recognition_ios
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
-  
+  pod 'SwiftSpinner'
+
   target 'image_recognition_iosTests' do
     inherit! :search_paths
     # Pods for testing
